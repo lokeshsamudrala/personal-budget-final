@@ -11,7 +11,7 @@ const LoginForm = ({ onLogin }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/login', { email, password });
+      const response = await axios.post('https://personal-budget-backend.vercel.app/api/login', { email, password });
       const token = response.data.token;
 
       // Save the token to localStorage or cookies for future requests

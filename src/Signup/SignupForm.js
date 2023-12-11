@@ -12,7 +12,7 @@ const SignupForm = ({ onSignup }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/signup', {
+      const response = await axios.post('https://personal-budget-backend.vercel.app/api/signup', {
         email,
         password,
         displayName, // Include displayName in the request

@@ -11,7 +11,7 @@ export default function BarChart() {
     
     useEffect(() => {
         // const token=localStorage.getItem("auth-token");
-        axios.get('http://localhost:5000/api/budgets/user')
+        axios.get('https://personal-budget-backend.vercel.app/api/budgets/user')
         .then(res => {
             var l=[];
             var d =[];
@@ -30,7 +30,7 @@ export default function BarChart() {
             
             })
 
-        axios.get('http://localhost:5000/api/expenses/user')
+        axios.get('https://personal-budget-backend.vercel.app/api/expenses/user')
         .then(res => {
             // var f = [];
             var e=[];

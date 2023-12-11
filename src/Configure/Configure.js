@@ -16,7 +16,7 @@ export default function Configure() {
     try {
         // let token = localStorage.getItem("auth-token");
       const budgetData = { title, related_value,color };
-      const budgetRes = await axios.post("http://localhost:5000/api/budgets",budgetData);
+      const budgetRes = await axios.post("https://personal-budget-backend.vercel.app/api/budgets",budgetData);
       //navigate('/configure');
       document.getElementById("Budget-title").value="";
       document.getElementById("Budget-related_value").value="";

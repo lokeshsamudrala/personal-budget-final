@@ -40,7 +40,7 @@ export default function Expense() {
       // let token = localStorage.getItem("auth-token");
       const expenseData = { title, related_value, month, year};
       const expenseRes = await axios.post(
-        "http://localhost:5000/api/expenses",
+        "https://personal-budget-backend.vercel.app/api/expenses",
         expenseData,
         // { headers: { "x-auth-token": token } }
       );

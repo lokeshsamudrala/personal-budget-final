@@ -5,7 +5,6 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const bodyParser = require("body-parser");
 const compression = require('compression');
-const axios = require('axios');
 const budgetModel = require("./models/budget");
 const userModel = require('./models/user')
 const expensesModel = require('./models/expense');

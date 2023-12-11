@@ -11,7 +11,7 @@ export default function LineChart() {
     
     useEffect(() => {
         
-        axios.get('http://localhost:5000/api/budgets/user')
+        axios.get('https://personal-budget-backend.vercel.app/api/budgets/user')
         .then(res => {
             var l=[];
             var d =[];
