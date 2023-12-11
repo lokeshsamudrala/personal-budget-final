@@ -11,7 +11,8 @@ const userModel = require('./models/user')
 const expensesModel = require('./models/expense');
 const app = express();
 const PORT = process.env.PORT || 5000;
-const MONGODB_URI = "mongodb://127.0.0.1:27017/Pb_DB"; // Replace with your MongoDB connection URI
+//const MONGODB_URI = "mongodb://127.0.0.1:27017/Pb_DB"; // Replace with your MongoDB connection URI
+const MONGODB_URI = "mongodb+srv://lokeshsamudrala7288:Lokesh7288@final-project.ivu3ctb.mongodb.net/?retryWrites=true&w=majority"
 
 app.use(bodyParser.json());
 app.use(express.json());
