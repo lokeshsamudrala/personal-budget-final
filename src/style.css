@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: "border-box";
+  }
+  
+  a {
+    color: #240a96;
+    text-decoration: unset;
+  }
+  
+  ul {
+    margin-left: 1.5rem;
+    list-style: none;
+  }
+  
+  button,
+  input[type="submit"] {
+    border: none;
+    background: none;
+    color: unset;
+    cursor: pointer;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  ul,
+  ol {
+    margin: 1em;
+  }
+  /* general */
+  .page {
+    padding: 1 rem;
+  }
+  
+  .container {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+  
+  /* header */
+  #Header {
+    background-color: #4d5791;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+  }
+  
+  #Header .title {
+    margin: 0;
+  
+    color: white;
+  }
+  #Header .auth-options {
+    display: flex;
+    height: 100%;
+  }
+  
+  #Header .auth-options button {
+    background-color: rgb(154, 68, 211);
+    padding: 0 1rem;
+    font-size: 1.1 rem;
+    color: white;
+  }
+  
+  #Header .auth-options button:hover {
+    background-color: #4d5791;
+  }
+  
+  /* form */
+  
+  .form label,
+  .form input {
+    display: block;
+    margin-left: 20px;
+  }
+  
+  .form input {
+    margin-bottom: 1rem;
+  }
+  
+  .form label {
+    margin-bottom: 0.2rem;
+  }
+  
+  .form input[type="text"],
+  .form input[type="email"],
+  .form input[type="password"] {
+    width: 100%;
+    padding: 0.3rem;
+    border-radius: 8px;
+    border: 2px solid #240a96;
+    background-color: #f0f0f0;
+    font-size: 1.1rem;
+  }
+  
+  .form input:focus {
+    outline: none;
+    border: 2px solid #1a1a1b;
+  }
+  
+  .form input[type="submit"] {
+    border: 2px solid #53d1c0;
+    padding: 0.3rem 0.5rem;
+    background-color: #a9c9e7;
+    border-radius: 8px;
+    font-size: 1.1rem;
+  }
+  
+  /* Error Response */
+  .error-notice {
+    border: 2px solid #a00720;
+    background-color: #d4c7c8;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .error-notice button {
+    background-color: #f0081b;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    border: 2px solid #a00720;
+  }
+  
+  /* PB */
+  /* Data forms */
+  
+  .DataForms button {
+    background-color: rgb(154, 68, 211);
+    padding: 0 1rem;
+    font-size: 1.1 rem;
+    color: white;
+  }
+  
+  .App.Line1 {
+    float: left;
+  }
+  
+  .App.Line1 {
+    float: right;
+  }

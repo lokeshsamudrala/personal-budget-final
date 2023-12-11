@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
+import Menu from './Menu/Menu';
+import HomePage from './HomePage/HomePage';
+import LoginPage from './Login/LoginForm';
+import SignupPage from './Signup/SignupForm';
+import Dashboard from './Dashboard/Dashboard';
+import Configure from './Configure/Configure';
+import Expenses from './Expenses/Expense';
 
-function App() {
+const App = () => {
+  const [authenticated, setAuthenticated] = useState(false);
+
+  const handleLogin = () => {
+    setAuthenticated(true);
+  };
+
+  const handleLogout = () => {
+    // Perform any necessary cleanup or server-side logout logic
+    setAuthenticated(false);
+  };
+
+  const handleSignup = () => {
+    setAuthenticated(true);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Menu authenticated={authenticated} onLogout={handleLogout} />
+      <div className='mainContainer'></div>
+        <Routes>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/configure' element={<Configure/>} />
+          <Route path='/expenses' element={<Expenses/>} />
+          <Route path='/login' element={authenticated ? <Navigate to="/dashboard" /> : <LoginPage onLogin={handleLogin} />} />
+          <Route path='/signup' element={authenticated ? <Navigate to="/dashboard" /> : <SignupPage onSignup={handleSignup} />} />
+        </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
